@@ -5,6 +5,8 @@
 #include <cmath>
 #include <cstring>
 #include <algorithm>
+#include <vector>
+#include <map>
 #include "primes.h"
 
 
