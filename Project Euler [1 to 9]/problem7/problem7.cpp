@@ -8,11 +8,10 @@ int problem7() {
     int p = 10001;
     int n = p*log(p)*(log(p)+1);
     bool a[n];
-    int i, j;
-    for (i = 3; i < n; i += 2) a[i] = 1;
-    for (i = 3; i * i < n; i += 2)
-        if (a[i]) for (j = i * i; j < n; j += i) a[j] = 0;
-    for (i = 3; i < n; i += 2) {
+    fill_step(&a[3], &a[n], true, 2);
+    for (int i = 3; i * i < n; i += 2)
+        if (a[i]) fill_step(&a[i*i], &a[n], false, i);
+    for (int i = 3; i < n; i += 2) {
         if (a[i]) p -= 1;
         if (p == 1) return i;
     }

@@ -14,7 +14,7 @@ int problem3() {
         }
         i += 2;
     }
-    return max(m, n);
+    return (n > 1) ? n : m;
 }
 
 int main() {
@@ -22,4 +22,4 @@ int main() {
     return run(problem3);
 }
 
-// 6857 // 0s
+// 6857 // 0.00s

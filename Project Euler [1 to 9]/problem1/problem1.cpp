@@ -5,9 +5,9 @@
 
 // Multiples of 3 and 5
 int problem1() {
-    int i, s = 0;
-    for (i = 0; i < 1000; i += 1)
-        if (i % 3 == 0 || i % 5 == 0) s += i;
+    int s = 0;
+    for (int i = 0; i < 1000; i += 1)
+        s += (i % 3 == 0) || (i % 5 == 0) ? i : 0;
     return s;
 }
 
@@ -16,4 +16,4 @@ int main() {
     return run(problem1);
 }
 
-// 233168 // 0s
+// 233168 // 0.00s

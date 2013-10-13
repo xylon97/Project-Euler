@@ -6,12 +6,11 @@
 // Largest product in a series
 int problem8() {
     FILE *f = fopen("number.txt", "r");
-    char a[1002] = "\0", b[102];
+    char a[1002] = "", b[102];
     while (fscanf(f, "%s ", b) != EOF) strcat(a, b);
     int i, j, p, m = 0;
     for (i = 4; i < strlen(a); i += 1) {
-        p = 1;
-        for (j = 0; j < 5; j += 1) p *= a[i-j]-'0';
+        for (p = 1, j = 0; j < 5; j += 1) p *= a[i-j]-'0';
         if (p > m) m = p;
     }
     return m;

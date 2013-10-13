@@ -6,10 +6,10 @@
 
 // Largest palindrome product
 int problem4() {
-    int i, j, m = 0;
-    for (i = 900; i <= 999; i += 1)
-        for (j = i + 1; j <= 999; j += 1)
-            if (is_palindrome(i*j)) m = max(m, i*j);
+    int m = 0;
+    for (int i = 900; i <= 999; i += 1)
+        for (int j = i + 1; j <= 999; j += 1)
+            if (is_palindrome(i*j) && i*j > m) m = i*j;
     return m;
 }
 
@@ -18,4 +18,4 @@ int main() {
     return run(problem4);
 }
 
-// 906609 // 0s
+// 906609 // 0.00s

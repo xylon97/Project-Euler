@@ -11,7 +11,7 @@ long long int problem13() {
     char num[52];
     int i, j, c, d, n = 100;
     long long int ans;
-    for (i = 0; i < sl; i += 1) sum[i] = 0;
+    fill(&a[0], &a[sl], 0);
     while (n--) {
         fscanf(f, "%s ", num);
         nl = strlen(num), j = sl-1, c = 0;

@@ -14,4 +14,4 @@ int main() {
     return run(problem6);
 }
 
-// 25164150 // 0s
+// 25164150 // 0.00s
